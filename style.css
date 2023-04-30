@@ -10,11 +10,16 @@
     --light-dark-bg: rgba(100, 100, 100, .3);
     --white-text-font: rgba(255, 255, 255, .7);
     --plus-light-dark-bg: rgba(70, 70, 70, .3);
+    --link-hover: rgb(51, 162, 255);
 }
 
 body {
     background-color: var(--dark-bg);
     font-family: 'Roboto', sans-serif;
+}
+
+main {
+    width: 100%;
 }
 
 .navbar-container {
@@ -35,6 +40,10 @@ header {
     box-shadow: 0px 1.5px 2.5px 0px rgba(0, 0, 0, .4);
 }
 
+ul {
+    list-style-type: none;
+}
+
 .logo-container img {
     height: 20px;
 }
@@ -47,15 +56,11 @@ nav > ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    list-style-type: none;
 }
 
 a, a:visited, a:hover, a:active, a:link {
     text-decoration: none;
     font-weight: normal;
-}
-
-li a {
     color: var(--white-text-font);
 }
 
@@ -89,4 +94,37 @@ li a {
 
 .fire-link span {
     color: var(--white-text-font);
+}
+
+.main-content-container {
+    width: 70%;
+    margin: auto;
+}
+
+
+.problems-container {
+    width: 80%;
+}
+
+.category-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.2em;
+}
+
+.category-container div a:hover, .category-container div a:active, .category-container div a:link {
+    color: var(--link-hover);
+}
+
+.category-container div a {
+    font-size: .98rem;
+}
+
+.category-container div a span {
+    background-color: var(--light-dark-bg);
+    border-radius: 15px;
+    padding: 2px 3px;
+    font-size: .8rem;
 }
