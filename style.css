@@ -11,6 +11,10 @@
     --white-text-font: rgba(255, 255, 255, .7);
     --plus-light-dark-bg: rgba(70, 70, 70, .3);
     --link-hover: rgb(51, 162, 255);
+    --table-second-row-background: rgb(42, 42, 42);
+    --dark-green-text: rgb(6, 161, 143);
+    --dark-orange-text: rgb(173, 132, 28);
+    --dark-red-text: rgb(185, 46, 74);
 }
 
 body {
@@ -98,12 +102,13 @@ a, a:visited, a:hover, a:active, a:link {
 
 .main-content-container {
     width: 70%;
-    margin: auto;
+    margin: 100px auto;
 }
 
 
 .problems-container {
     width: 80%;
+    margin: auto;
 }
 
 .category-container {
@@ -127,4 +132,55 @@ a, a:visited, a:hover, a:active, a:link {
     border-radius: 15px;
     padding: 2px 3px;
     font-size: .8rem;
+    color: var(--white-text-font);
+}
+
+.problems-table-container {
+    width: 100%;
+    color: white;
+    margin-top: 25px;
+}
+
+.table-content-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: .5fr 1.5fr 1fr;
+    gap: 2em;
+    padding: 10px 0;
+    border-radius: 1px;
+    max-height: 40px;
+    overflow: hidden;
+}
+
+.second-row {
+    background-color: var(--table-second-row-background);
+}
+
+.difficulty-hard {
+    color: var(--dark-red-text);
+}
+
+.difficulty-easy {
+    color: var(--dark-green-text);
+}
+
+.difficulty-medium {
+    color: var(--dark-orange-text);
+}
+
+
+.problem-title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%; 
+}
+
+.problem-title a {
+    color: white;
+    transition: all .2s cubic-bezier(.7,.09,.23,.85);
+}
+
+.problem-title a:hover {
+    color: var(--link-hover);
 }
